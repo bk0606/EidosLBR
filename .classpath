@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/applicationServer.publishing.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/common.JniExtractor.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/common.utilities.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/connectivity.fri.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/de.mukis.jama-2.0.0.M1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/de.mukis.jama-2.0.0.M1-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/roboticsAPI.handGuiding.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/roboticsAPI.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/roboticsAPI.smartServo.jar"/>
+	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/roboticsAPI.smartServoLIN.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/junit-3.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/slf4j-api-2.0.99.jar"/>
+	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/slf4j-simple-1.6.99.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
