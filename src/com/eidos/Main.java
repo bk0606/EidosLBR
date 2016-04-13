@@ -1,11 +1,10 @@
+package com.eidos;
 
 import com.kuka.roboticsAPI.applicationModel.IApplicationData;
 import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
 import com.kuka.roboticsAPI.controllerModel.Controller;
 import com.kuka.roboticsAPI.deviceModel.Device;
-import com.kuka.roboticsAPI.deviceModel.JointEnum;
 import com.kuka.roboticsAPI.deviceModel.JointPosition;
-import com.kuka.roboticsAPI.deviceModel.LBR;
 import com.kuka.roboticsAPI.geometricModel.AbstractFrame;
 import com.kuka.roboticsAPI.geometricModel.math.Transformation;
 import com.kuka.roboticsAPI.motionModel.CartesianPTP;
@@ -23,7 +22,7 @@ import static com.kuka.roboticsAPI.motionModel.BasicMotions.*;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Main main");
+        System.out.println("com.eidos.Main main");
         App m = new App(SimulatableRoboticsAPIMode.Simulation);
     }
 }
