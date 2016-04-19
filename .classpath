@@ -15,5 +15,6 @@
 	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/junit-3.8.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/slf4j-api-2.0.99.jar"/>
 	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/slf4j-simple-1.6.99.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/scala-sdk-2.11.8"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

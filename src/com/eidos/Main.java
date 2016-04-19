@@ -1,20 +1,37 @@
 package com.eidos;
 
+import com.kuka.roboticsAPI.RoboticsAPIContext;
+import com.kuka.roboticsAPI.RoboticsAPILazyDeviceContext;
 import com.kuka.roboticsAPI.applicationModel.IApplicationData;
 import com.kuka.roboticsAPI.applicationModel.RoboticsAPIApplication;
+import com.kuka.roboticsAPI.commandModel.IControllerCommand;
 import com.kuka.roboticsAPI.controllerModel.Controller;
+import com.kuka.roboticsAPI.controllerModel.mock.MockController;
+import com.kuka.roboticsAPI.controllerModel.sunrise.ISPRHook;
+import com.kuka.roboticsAPI.controllerModel.sunrise.SunriseController;
+import com.kuka.roboticsAPI.controllerModel.sunrise.SunriseExecutionService;
+import com.kuka.roboticsAPI.controllerModel.sunrise.SunriseLBR;
+import com.kuka.roboticsAPI.controllerModel.sunrise.api.Assignment;
+import com.kuka.roboticsAPI.controllerModel.sunrise.api.SPR;
+import com.kuka.roboticsAPI.controllerModel.sunrise.predefinedCompounds.AxisValidatorModule;
 import com.kuka.roboticsAPI.deviceModel.Device;
 import com.kuka.roboticsAPI.deviceModel.JointPosition;
+import com.kuka.roboticsAPI.deviceModel.LBR;
 import com.kuka.roboticsAPI.geometricModel.AbstractFrame;
+import com.kuka.roboticsAPI.geometricModel.ITransformationProvider;
+import com.kuka.roboticsAPI.geometricModel.Workpiece;
 import com.kuka.roboticsAPI.geometricModel.math.Transformation;
 import com.kuka.roboticsAPI.motionModel.CartesianPTP;
 import com.kuka.roboticsAPI.motionModel.PTP;
 import com.kuka.roboticsAPI.motionModel.PTPHome;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.net.Socket;
+import java.io.*;
+import java.net.*;
+import com.kuka.roboticsAPI.SimulatableRobot;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Optional;
 import static com.kuka.roboticsAPI.motionModel.BasicMotions.*;
 
@@ -23,28 +40,45 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("com.eidos.Main main");
-        App m = new App(SimulatableRoboticsAPIMode.Simulation);
+        /*File f = new File("D:\\Dropbox\\Code\\Java\\LBR\\src\\com\\eidos\\RoboticsAPI.config.xml");
+        try {
+            System.out.print(f.length());
+            System.out.print(Files.readAllLines(Paths.get("D:\\Dropbox\\Code\\Java\\LBR\\src\\com\\eidos\\RoboticsAPI.config.xml"), Charset.forName("ISO-8859-1")));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }*/
+        RoboticsApp m = new RoboticsApp(SimulatableRoboticsAPIMode.Simulation);
     }
 }
 
-class App extends SimulatableRoboticsAPIApplication {
+class RoboticsApp extends SimulatableRoboticsAPIApplication {
     private Controller kuka_Sunrise_Cabinet_1;
+    private SunriseExecutionService serv;
     // private LBR iiwa7R8001;
     private SimulatableLBR iiwa7R8001;
+    private LBR robot;
 
     @Override
-    public void initialize() /*throws Exception */ {
-        iiwa7R8001 = new SimulatableLBR(7);
-		/*kuka_Sunrise_Cabinet_1 = getController("KUKA_Sunrise_Cabinet_1");
-		iiwa7R8001 = (LBR) getDevice(kuka_Sunrise_Cabinet_1, "LBR_iiwa_7_R800_1");*/
+    // This will call before robot execution
+    public void initialize() {
+        kuka_Sunrise_Cabinet_1 = getController("KUKA_Sunrise_Cabinet_1");
+        robot = (LBR) getDevice(kuka_Sunrise_Cabinet_1, "LBR_iiwa_7_R800_1");
+        /*serv = (SunriseExecutionService)kuka_Sunrise_Cabinet_1.getExecutionService();
+        AxisValidatorModule axV = new AxisValidatorModule("");*/
+    }
+
+    @Override
+    // This will call before simulator execution
+    public void initializeSimulation() {
+        robot = new SimulatableRobot("KUKA_Sunrise_Cabinet_1");
     }
 
     @Override
     public void run() {
-        iiwa7R8001.move(ptp(10.0D));
+        robot.move(ptp(10.0D));
     }
 
-    public App(SimulatableRoboticsAPIMode mode) {
+    public RoboticsApp(SimulatableRoboticsAPIMode mode) {
         super(mode);
     }
 }
@@ -136,6 +170,10 @@ abstract class SimulatableRoboticsAPIApplication {
     public void initialize() {
     }
 
+    public void initializeSimulation() {
+
+    }
+
     public void dispose() {
     }
 
@@ -143,7 +181,7 @@ abstract class SimulatableRoboticsAPIApplication {
     public void runApplication() throws IllegalAccessError {
         if (app.isPresent()) app.get().runApplication();
         else {
-            this.initialize();
+            this.initializeSimulation();
             this.run();
         }
     }
