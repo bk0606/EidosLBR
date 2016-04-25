@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/LBR.iml" filepath="$PROJECT_DIR$/LBR.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimulatableAPI.iml" filepath="$PROJECT_DIR$/SimulatableAPI.iml" />
     </modules>
   </component>
 </project>

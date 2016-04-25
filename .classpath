@@ -1,20 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/applicationServer.publishing.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/common.JniExtractor.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/common.utilities.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/connectivity.fri.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/de.mukis.jama-2.0.0.M1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/de.mukis.jama-2.0.0.M1-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/roboticsAPI.handGuiding.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/roboticsAPI.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/roboticsAPI.smartServo.jar"/>
-	<classpathentry kind="lib" path="C:/Users/a.bikeev/Downloads/Kiiwa1-master/Kiiwa1-master/KUKAJavaLib/roboticsAPI.smartServoLIN.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/junit-3.8.1.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/slf4j-api-2.0.99.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/System/Libs/Java/slf4j/slf4j-simple-1.6.99.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/scala-sdk-2.11.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="KUKAJavaLib/javax.inject_1.0.0.v20091030.jar"/>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.common.datatypes_1.15.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/com.kuka.common.datatypes_1.15.0.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.common.utilities_1.5.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/com.kuka.common.utilities_1.5.0.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.mastering.provider.api_1.5.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/#Bundle-JavaDoc#!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.resource.api_1.0.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/com.kuka.resource.api_1.0.0.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.roboticsAPI_1.15.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/com.kuka.roboticsAPI_1.15.0.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.roboticsAPI.handGuiding_1.15.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/com.kuka.roboticsAPI.handGuiding_1.15.0.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.sunrise.common_1.0.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/com.kuka.sunrise.common_1.0.0.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.task.api_1.0.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/com.kuka.task.api_1.0.0.7-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="KUKAJavaLib/com.kuka.jogging.provider.api_1.0.0.7.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/SimulatableAPI/KUKAJavaLib/#Bundle-JavaDoc#!/"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
